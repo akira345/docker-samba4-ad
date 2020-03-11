@@ -46,13 +46,13 @@ if [[ ! -f /usr/local/samba/external/smb.conf ]]; then
 		fi
 	fi
 	sed -i "/\[global\]/a \
-		wins support = yes\\n\
-		log level = 3\\n\
-		load printers = no\\n\
-		printing = bsd\\n\
-		printcap name = /dev/null\\n\
-		#server services = s3fs, rpc, nbt, wrepl, ldap, cldap, kdc, drepl, winbindd, ntp_signd, kcc, dnsupdate, dns\
-		" /usr/local/samba/etc/smb.conf
+		\\\twins support = yes\\n\
+	log level = 3\\n\
+	load printers = no\\n\
+	printing = bsd\\n\
+	printcap name = /dev/null\\n\
+	#server services = s3fs, rpc, nbt, wrepl, ldap, cldap, kdc, drepl, winbindd, ntp_signd, kcc, dnsupdate, dns\
+	" /usr/local/samba/etc/smb.conf
 
 	if [[ $DNSFORWARDER != "NONE" ]]; then
 		sed -i "/\[global\]/a \
