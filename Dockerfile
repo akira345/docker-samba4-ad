@@ -1,7 +1,7 @@
 # debian
 FROM debian:10
 
-# ƒ^ƒCƒ€ƒ][ƒ“‚ğJST‚É‚·‚éB
+# ã‚¿ã‚¤ãƒ ã‚¾ãƒ¼ãƒ³ã‚’JSTã«ã™ã‚‹ã€‚
 RUN apt-get install -y tzdata && \
     ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime && \
     dpkg-reconfigure -f noninteractive tzdata
@@ -10,7 +10,7 @@ ENV SAMBA_VERSION samba-4.12.0
 
 ENV DEBIAN_FRONTEND noninteractive
 
-# Samba4ƒCƒ“ƒXƒg
+# Samba4ã‚¤ãƒ³ã‚¹ãƒˆ
 RUN apt-get update \
     && apt-get upgrade -y \
     && apt-get -y install acl attr autoconf bison build-essential \
