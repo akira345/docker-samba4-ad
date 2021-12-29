@@ -1,12 +1,12 @@
 # debian
-FROM debian:10
+FROM debian:11
 
 # タイムゾーンをJSTにする。
 RUN apt-get install -y tzdata && \
     ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime && \
     dpkg-reconfigure -f noninteractive tzdata
 
-ENV SAMBA_VERSION samba-4.12.0
+ENV SAMBA_VERSION samba-4.15.3
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -19,7 +19,7 @@ RUN apt-get update \
        libcap-dev libcups2-dev libgnutls28-dev libjson-perl wget \
        libldap2-dev libncurses5-dev libpam0g-dev libparse-yapp-perl \
        libpopt-dev libreadline-dev perl perl-modules pkg-config \
-       python-all-dev python-dev python-dnspython python-crypto \
+       python-all-dev python-dev libdbus-1-dev python3-markdown \
        xsltproc zlib1g-dev libjansson-dev python3-distutils git \
        libpython3-dev liblmdb-dev  pkg-config libgnutls28-dev python3-dns python3-dnspython \
        libarchive-dev libacl1-dev libldap2-dev libpam0g-dev libgpgme11-dev \
