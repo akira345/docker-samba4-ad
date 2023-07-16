@@ -1,5 +1,5 @@
 # debian
-FROM debian:11
+FROM debian:12
 
 # タイムゾーンをJSTにする。
 RUN apt-get install -y tzdata && \
