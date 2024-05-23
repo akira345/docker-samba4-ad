@@ -1,5 +1,5 @@
 # ubuntu
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 
 # タイムゾーンをJSTにする。
 RUN apt-get update && apt-get install -y wget tzdata && \
