@@ -15,7 +15,7 @@ RUN mkdir /usr/local/src/samba \
     && wget https://download.samba.org/pub/samba/stable/$SAMBA_VERSION.tar.gz \
     && tar xvzfp $SAMBA_VERSION.tar.gz -C /usr/local/src/samba \
     && rm $SAMBA_VERSION.tar.gz
-RUN cd /usr/local/src/samba/$SAMBA_VERSION/bootstrap/generated-dists/ubuntu2204 \
+RUN cd /usr/local/src/samba/$SAMBA_VERSION/bootstrap/generated-dists/ubuntu2404 \
     && ./bootstrap.sh \
     && cd ../../../ \
     && ./configure --with-utmp --with-ads \
