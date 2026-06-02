@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y wget tzdata && \
     ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime && \
     dpkg-reconfigure -f noninteractive tzdata
 
-ENV SAMBA_VERSION samba-4.18.5
+ENV SAMBA_VERSION samba-4.24.3
 
 ENV DEBIAN_FRONTEND noninteractive
 
